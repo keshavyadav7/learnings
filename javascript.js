@@ -4,7 +4,6 @@
 // take a number input from a user and create a array for 1 to n 
 // use reduce method to calculate sum of all numbers in the array.
 // use the reduce method to calculate product of all numbera in the array.
-
 // let num= prompt("enter the number");
 // let numArr=[];
 // for(let i=1; i<=num;i++){
@@ -33,10 +32,29 @@
 
 // div with unique value
 
-let divs= document.querySelectorAll(".box");
-console.dir(divs);
-let i=1;
-for(div of divs){
-    div.innerText=`new value ${i}`;
-    i++;
-};
+// let divs= document.querySelectorAll(".box");
+// console.dir(divs);
+// let i=1;
+// for(div of divs){
+//     div.innerText=`new value ${i}`;
+//     i++;
+// };
+
+
+// dom manipulation questions
+
+// qs1. create a new button element. Give it a text "click me ", background color of red & text color of white .
+// Insert the button as the first element inside the body tag.
+
+// let newbutton = document.createElement("button");
+// console.log(newbutton);
+// newbutton.innerText="click me";
+// newbutton.style.backgroundColor="red";
+// newbutton.style.color="white";
+// let bodytag = document.querySelector("body");
+// bodytag.prepend(newbutton);
+
+//ques2
+
+// let para = document.querySelector("p");
+// para.classList.add("content");  /// adding new class name
