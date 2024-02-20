@@ -58,3 +58,46 @@
 
 // let para = document.querySelector("p");
 // para.classList.add("content");  /// adding new class name
+
+/* faulty calculator that do right task only 90% of time that means 10 % time this calculator will +==-,*==/ ,-==+ */
+
+// //INPUT 1 num
+// const num1 = Number(prompt("enter the first number"));
+// // input 2 num
+// const num2 = Number(prompt("enter second number"));
+// // operation input
+// const opr= prompt ("enter the operation");
+
+// const a = Math.random();
+// console.log(a);
+// let ans=0;
+// if (a>0.1){
+//     if(opr=="+"){
+        
+//        ans = num1+num2;
+//     }
+//     else if (opr=="-"){
+//          ans=num1-num2;
+//     }
+//     else if (opr=="*"){
+//          ans= num1*num2;
+//     }
+//     else if (opr=="/"){
+//          ans= num1/num2;
+//     }
+// }
+// else{
+//     if(opr=="+"){
+//          ans= num1-num2;
+//      }
+//      else if (opr=="-"){
+//           ans=num1*num2;
+//      }
+//      else if (opr=="*"){
+//           ans= num1/num2;
+//      }
+//      else if (opr=="/"){
+//           ans= num1*num2;
+//      }
+// }
+// console.log("your answer for ",num1,opr,num2,"=",ans);
