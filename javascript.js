@@ -101,3 +101,43 @@
 //      }
 // }
 // console.log("your answer for ",num1,opr,num2,"=",ans);
+
+//busniss name generator 
+
+let button= document.querySelector("button");
+button.addEventListener("click" ,()=>{
+    let first , second , third;
+let random =Math.random();
+if (random<0.33){
+    first =  "crazy";
+}
+else if(random>0.33 && random<0.66){
+    first = "amazing";
+}
+else{
+    first="fire";
+}
+
+random = Math.random();
+if (random<0.33){
+    second =  "Engine";
+}
+else if(random>0.33 && random<0.66){
+    second = "food";
+}
+else{
+    second="garments";
+}
+
+random = Math.random();
+if (random<0.33){
+    third =  "bros";
+}
+else if(random>0.33 && random<0.66){
+    third = "limited";
+}
+else{
+    third="hub";
+}
+    console.log(`${first} ${second} ${third}`);
+});

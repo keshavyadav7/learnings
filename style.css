@@ -1,4 +1,4 @@
-.para{
+/* .para{
     background-color: aquamarine;
     color:blueviolet;
     font-size: large;
@@ -10,4 +10,13 @@
     color:white;
     font-size: large;
     text-align: center;
+} */
+
+button{
+    background-color: black;
+    height:100px;
+    width :200px;
+    color:white;
+    
+
 }
