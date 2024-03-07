@@ -104,40 +104,135 @@
 
 //busniss name generator 
 
-let button= document.querySelector("button");
-button.addEventListener("click" ,()=>{
-    let first , second , third;
-let random =Math.random();
-if (random<0.33){
-    first =  "crazy";
-}
-else if(random>0.33 && random<0.66){
-    first = "amazing";
-}
-else{
-    first="fire";
+// let button= document.querySelector("button");
+// button.addEventListener("click" ,()=>{
+//     let first , second , third;
+// let random =Math.random(); // to generate random value between 0 to 1
+// // first variable value
+// if (random<0.33){
+//     first =  "crazy";
+// }
+// else if(random>0.33 && random<0.66){
+//     first = "amazing";
+// }
+// else{
+//     first="fire";
+// }
+
+// random = Math.random();
+// // second variable value
+// if (random<0.33){
+//     second =  "Engine";
+// }
+// else if(random>0.33 && random<0.66){
+//     second = "food";
+// }
+// else{
+//     second="garments";
+// }
+
+// random = Math.random();
+// //third variable value
+// if (random<0.33){ 
+//     third =  "bros";
+// }
+// else if(random>0.33 && random<0.66){
+//     third = "limited";
+// }
+// else{
+//     third="hub";
+// }
+//     console.log(`${first} ${second} ${third}`);
+// });
+
+
+// factorial of num
+//method one
+// let num = Number(prompt("enter the number"));
+// let fact =1;
+// let factorial = (num) =>{
+//     for(let i = 1; i<=num;i++){
+//         fact*=i;
+//     }
+//     return fact ;
+// }
+
+// let ans = factorial(num);
+// console.log(ans);
+
+// dom manipulation questions
+
+// let title = prompt("enter the title");
+// let channelName = prompt("enter the channel name");
+// let views =  Number(prompt("enter the views"));
+// let time = prompt("enter the time");
+// let thumbnail = prompt("enter the thumbnail");
+// let duration = prompt("enter the duration of the video in 00:00 format");
+
+
+// function ViewsFunction(views){
+//     if(views<1000){
+//         return views;
+//     }
+//     else if(views>1000&&views<1000000){
+//      let newView= Math.round(views/=1000);
+//         return`${newView}K`;
+//     }
+//     else if (views>=1000000){
+//         let newView = Math.round(views/=1000000);
+//         return `${newView}M`;
+//     }
+// }
+// let ViewsCount = String(ViewsFunction(views));
+
+
+
+// document.querySelector(".title").innerText= title;
+// document.querySelector(".chennelname").innerText= channelName;
+// document.querySelector(".views").innerText= `. ${ViewsCount}`;
+// document.querySelector(".months").innerText= `. ${time} months old`;
+// document.querySelector(".duration").innerText= duration;
+
+
+
+//callback 
+
+// function sum(a,b){
+//     return a+b;
+// } //1
+// function callback(a,b,sum){
+//     let x=sum(a,b);
+//     console.log(x);
+// }//2
+
+// callback(3,4,sum);//3
+
+//we dont use sum() during call back as seen in 3 .. in 2 we can write sum or sumCallback as parameters.. 
+
+// CALL BACK HELL
+
+function greet(name,newName){
+    setTimeout(()=>{
+        console.log("hello",name);
+        newName();
+    },2000);
 }
 
-random = Math.random();
-if (random<0.33){
-    second =  "Engine";
-}
-else if(random>0.33 && random<0.66){
-    second = "food";
-}
-else{
-    second="garments";
-}
+//setTimeout(); function is use to display any task after some time like in upper case we used 2000 == 2sec
 
-random = Math.random();
-if (random<0.33){
-    third =  "bros";
-}
-else if(random>0.33 && random<0.66){
-    third = "limited";
-}
-else{
-    third="hub";
-}
-    console.log(`${first} ${second} ${third}`);
+greet("keshav"); 
+// if we are passing string then we use ""
+
+// if we want to call different function one by one after 2 sec of break
+
+greet("keshav",()=>{
+    greet("yash",()=>{
+        greet("harsh");
+    })
 });
+
+// this statement keep on expanding with complex function that create unreadable code that called callback hell
+
+
+
+// let x = String(ViewsFunction(views));
