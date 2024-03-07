@@ -73,7 +73,7 @@
 // let ans=0;
 // if (a>0.1){
 //     if(opr=="+"){
-        
+
 //        ans = num1+num2;
 //     }
 //     else if (opr=="-"){
@@ -209,30 +209,77 @@
 
 //we dont use sum() during call back as seen in 3 .. in 2 we can write sum or sumCallback as parameters.. 
 
+
 // CALL BACK HELL
 
-function greet(name,newName){
-    setTimeout(()=>{
-        console.log("hello",name);
-        newName();
-    },2000);
-}
 
-//setTimeout(); function is use to display any task after some time like in upper case we used 2000 == 2sec
+// function greet(name, newName) {
+//     setTimeout(() => {
+//         console.log("hello", name);
+//         newName();
+//     }, 2000);
+// }
 
-greet("keshav"); 
-// if we are passing string then we use ""
+// //setTimeout(); function is use to display any task after some time like in upper case we used 2000 == 2sec
 
-// if we want to call different function one by one after 2 sec of break
+// greet("keshav");
+// // if we are passing string then we use ""
 
-greet("keshav",()=>{
-    greet("yash",()=>{
-        greet("harsh");
-    })
-});
+// // if we want to call different function one by one after 2 sec of break
+
+// greet("keshav", () => {
+//     greet("yash", () => {
+//         greet("harsh");
+//     })
+// });
 
 // this statement keep on expanding with complex function that create unreadable code that called callback hell
 
+//PROMISES CONCEPTS
+
+// resolve concepts
+function promise(){
+    setTimeout(()=>{
+        let newPromise = new Promise((resolve, reject) => { //promise syntax
+        console.log("newPromise");
+        resolve("success");     //pending to fulfiled
+         });
+         console.log(newPromise);
+
+    //if promise is resolve then what to do (to associate function with promise)
+    newPromise.then(()=>{
+        console.log("your promise have successs");
+    })
 
 
-// let x = String(ViewsFunction(views));
+
+    },2000)
+     
+}
+
+promise(); // pending  state to the success (fulfiled state)
+
+//reject concept
+function rejectPromise(){
+    let newproimese = new Promise ((resolve,reject)=>{
+        console.log("reject promise");
+        reject("error while print");  //pending state to reject state (error)
+    })
+    console.log(newproimese);
+    
+    // if promise is rejected then what to do (to associate function while promise is reject)
+
+    newproimese.catch(()=>{
+        console.log("oops");
+    });
+
+}
+rejectPromise();
+
+//PROMISE CHAIN
+
+
+
+
+
+
