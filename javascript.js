@@ -238,46 +238,66 @@
 //PROMISES CONCEPTS
 
 // resolve concepts
-function promise(){
-    setTimeout(()=>{
-        let newPromise = new Promise((resolve, reject) => { //promise syntax
-        console.log("newPromise");
-        resolve("success");     //pending to fulfiled
-         });
-         console.log(newPromise);
+// function promise(){
+//     setTimeout(()=>{
+//         let newPromise = new Promise((resolve, reject) => { //promise syntax
+//         console.log("newPromise");
+//         resolve("success");     //pending to fulfiled
+//          });
+//          console.log(newPromise);
 
-    //if promise is resolve then what to do (to associate function with promise)
-    newPromise.then(()=>{
-        console.log("your promise have successs");
-    })
+//     //if promise is resolve then what to do (to associate function with promise)
+//     newPromise.then(()=>{
+//         console.log("your promise have successs");
+//     })
 
 
 
-    },2000)
-     
-}
+//     },2000)
 
-promise(); // pending  state to the success (fulfiled state)
+// }
 
-//reject concept
-function rejectPromise(){
-    let newproimese = new Promise ((resolve,reject)=>{
-        console.log("reject promise");
-        reject("error while print");  //pending state to reject state (error)
-    })
-    console.log(newproimese);
-    
-    // if promise is rejected then what to do (to associate function while promise is reject)
+// promise(); // pending  state to the success (fulfiled state)
 
-    newproimese.catch(()=>{
-        console.log("oops");
-    });
+// //reject concept
+// function rejectPromise(){
+//     let newproimese = new Promise ((resolve,reject)=>{
+//         console.log("reject promise");
+//         reject("error while print");  //pending state to reject state (error)
+//     })
+//     console.log(newproimese);
 
-}
-rejectPromise();
+//     // if promise is rejected then what to do (to associate function while promise is reject)
+
+//     newproimese.catch(()=>{
+//         console.log("oops");
+//     });
+
+// }
+// rejectPromise();
 
 //PROMISE CHAIN
 
+function promiseChain(name) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("hello", name);
+            resolve("success");
+        }, 4000)
+    })
+}
+//callback 
+promiseChain("keshav").then
+    ((res) => {
+        console.log("next 1");
+        promiseChain("rajat").then((res) => 
+        {
+            console.log("next 2");
+            promiseChain("raju").then((res) => 
+            {})
+        })
+
+    });
 
 
 
