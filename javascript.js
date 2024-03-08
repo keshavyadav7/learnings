@@ -278,28 +278,57 @@
 
 //PROMISE CHAIN
 
-function promiseChain(name) {
+// function promiseChain(name) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("hello", name);
+//             resolve("success");
+//         }, 4000)
+//     })
+// }
+// //callback 
+// promiseChain("keshav").then
+//     ((res) => {
+//         console.log("next 1");
+//         promiseChain("rajat").then((res) => 
+//         {
+//             console.log("next 2");
+//             promiseChain("raju").then((res) => 
+//             {})
+//         })
+
+//     });
+
+
+// ASYNC AWAIT
+
+ function greet(name){
     return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("hello", name);
-            resolve("success");
-        }, 4000)
+       setTimeout(()=>{
+        console.log("hello",name);
+        resolve("success");
+       },2000) ;
     })
 }
-//callback 
-promiseChain("keshav").then
-    ((res) => {
-        console.log("next 1");
-        promiseChain("rajat").then((res) => 
-        {
-            console.log("next 2");
-            promiseChain("raju").then((res) => 
-            {})
-        })
+ 
+// async function greetlist(){
+//     await greet("keshav"); //first this will run
+//     await greet("ram");     // then thhis
+//     await greet("raj");     // then
+//     await greet("yash");    // then
+//     await greet("harsh");   // then
+//     await greet("kanika");  // then
+// }
 
-    });
-
+// greetlist();
 
 
-
-
+// async awit second method of writing if you dont want to re declare this function
+(async function greetlist(){
+    await greet("keshav"); //first this will run
+    await greet("ram");     // then thhis
+    await greet("raj");     // then
+    await greet("yash");    // then
+    await greet("harsh");   // then
+    await greet("kanika");  // then
+})();
