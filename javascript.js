@@ -302,33 +302,61 @@
 
 // ASYNC AWAIT
 
- function greet(name){
-    return new Promise((resolve, reject) => {
-       setTimeout(()=>{
-        console.log("hello",name);
-        resolve("success");
-       },2000) ;
-    })
-}
+//  function greet(name){
+//     return new Promise((resolve, reject) => {
+//        setTimeout(()=>{
+//         console.log("hello",name);
+//         resolve("success");
+//        },2000) ;
+//     })
+// }
  
-// async function greetlist(){
+// // async function greetlist(){
+// //     await greet("keshav"); //first this will run
+// //     await greet("ram");     // then thhis
+// //     await greet("raj");     // then
+// //     await greet("yash");    // then
+// //     await greet("harsh");   // then
+// //     await greet("kanika");  // then
+// // }
+
+// // greetlist();
+
+
+// // async awit second method of writing if you dont want to re declare this function
+
+// (async function greetlist(){
 //     await greet("keshav"); //first this will run
 //     await greet("ram");     // then thhis
 //     await greet("raj");     // then
 //     await greet("yash");    // then
 //     await greet("harsh");   // then
 //     await greet("kanika");  // then
-// }
+// })();
 
-// greetlist();
+//OBJECT AND CLASSES CONCEPTS
 
 
-// async awit second method of writing if you dont want to re declare this function
-(async function greetlist(){
-    await greet("keshav"); //first this will run
-    await greet("ram");     // then thhis
-    await greet("raj");     // then
-    await greet("yash");    // then
-    await greet("harsh");   // then
-    await greet("kanika");  // then
-})();
+//object 
+const student ={
+    marks : "96%",
+    fullname:"keshav",
+    printMarks:function(){
+        console.log("500");   //method
+    }
+
+}
+student.printMarks(); 
+console.log(student);
+
+//prototype
+
+const keshav={
+    marks:"99%",
+    fullname:"keshav"
+}
+console.log(keshav);
+keshav.__proto__ = student;
+console.log(keshav);
+
+
