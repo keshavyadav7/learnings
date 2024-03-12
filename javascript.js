@@ -338,25 +338,43 @@
 
 
 //object 
-const student ={
-    marks : "96%",
-    fullname:"keshav",
-    printMarks:function(){
-        console.log("500");   //method
+// const student ={
+//     marks : "96%",
+//     fullname:"keshav",
+//     printMarks:function(){
+//         console.log("500");   //method
+//     }
+
+// }
+// student.printMarks(); 
+// console.log(student);
+
+// //prototype
+
+// const keshav={
+//     marks:"99%",
+//     fullname:"keshav"
+// }
+// console.log(keshav);
+// keshav.__proto__ = student;
+// console.log(keshav);
+
+//CLASS 
+
+class myclass{
+    constructor(){
+        console.log("WELCOME")   // constructor is a method(function) that automaticly formed while creating a class 
     }
-
+    greet(){
+        console.log("hello");
+    }
+    name(name){
+        this.name=name;
+    }
 }
-student.printMarks(); 
-console.log(student);
-
-//prototype
-
-const keshav={
-    marks:"99%",
-    fullname:"keshav"
-}
+let keshav=new myclass();
+keshav.name("keshav");
 console.log(keshav);
-keshav.__proto__ = student;
-console.log(keshav);
+
 
 
