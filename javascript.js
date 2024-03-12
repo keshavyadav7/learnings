@@ -361,20 +361,36 @@
 
 //CLASS 
 
-class myclass{
-    constructor(){
-        console.log("WELCOME")   // constructor is a method(function) that automaticly formed while creating a class 
-    }
-    greet(){
-        console.log("hello");
-    }
-    name(name){
-        this.name=name;
+// class myclass{
+//     constructor(){
+//         console.log("WELCOME")   // constructor is a method(function) that automaticly formed while creating a class 
+//     }
+//     greet(){
+//         console.log("hello");
+//     }
+//     name(name){
+//         this.name=name;
+//     }
+// }
+// let keshav=new myclass();
+// keshav.name("keshav");
+// console.log(keshav);
+
+//INHERITANCE
+class greet {    //PARENTS CLASS 
+    constructor(name){
+        console.log("hello",name);
+    };
+    whatAboutYou(){
+        console.log("how are you??")
+    };
+}
+
+class work extends greet{ //CHILD CLASS
+    appoint(){
+        console.log("your appointment is at 4:00 pm");
     }
 }
-let keshav=new myclass();
-keshav.name("keshav");
-console.log(keshav);
-
-
+let x= new  work("keshav");   // STORING THE CLASS IN VARIABLE 
+console.log(x.whatAboutYou(),x.appoint());
 
