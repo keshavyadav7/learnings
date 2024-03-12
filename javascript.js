@@ -397,24 +397,52 @@
 
 // SUPER KEYWORD 
 
-class greet {    //PARENTS CLASS 
-        constructor(name){
-            console.log("hello",name);
-        };
-        whatAboutYou(){
-            console.log("how are you??")
-        };
-    }
+// class greet {    //PARENTS CLASS 
+//         constructor(name){
+//             console.log("hello",name);
+//         };
+//         whatAboutYou(){
+//             console.log("how are you??")
+//         };
+//     }
     
-    class work extends greet{ //CHILD CLASS
-        constructor(name){
-            super(name);  //to invoke parents class constructor
-            console.log("So",name);
-        }
-        appoint(){
-            console.log("your appointment is at 4:00 pm");
-        }
-    }
-    let x= new  work("keshav");   // STORING THE CLASS IN VARIABLE 
-    console.log(x.whatAboutYou(),x.appoint());
+//     class work extends greet{ //CHILD CLASS
+//         constructor(name){
+//             super(name);  //to invoke parents class constructor
+//             console.log("So",name);
+//         }
+//         appoint(){
+//             console.log("your appointment is at 4:00 pm");
+//         }
+//     }
+//     let x= new  work("keshav");   // STORING THE CLASS IN VARIABLE 
+//     console.log(x.whatAboutYou(),x.appoint());
 
+//PRACTICE QUESTIONS 
+// QUESTION 1 
+//you are creating a website for your college . Create a class user with 2 properties, name & email. it also has a method called viewData() that allows user to view website data.
+let data = "info";
+class user {
+    constructor(name,email){
+        this.name=name;
+        this.email=email;
+        // console.log(this.name,this.email);
+    }
+    viewData(){
+        console.log("fetching your data ",data);
+    }
+}
+let keshav =new user("keshav","ypavitra3@gmail.com");
+let rohan =new user("rohan","rohan3323@gmail.com");
+let sohan =new user("sohan","sohan34@gmail.com");
+
+// question2
+//create a new class called admin which inherits from user . add a new method called editdata to admin that allows its to edit website date.
+class admin extends user{
+    editdata(data){
+        this.data=data;
+        data="some new data";
+        console.log(data);
+    }
+}
+let Admin=new admin;
