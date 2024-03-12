@@ -377,20 +377,44 @@
 // console.log(keshav);
 
 //INHERITANCE
-class greet {    //PARENTS CLASS 
-    constructor(name){
-        console.log("hello",name);
-    };
-    whatAboutYou(){
-        console.log("how are you??")
-    };
-}
 
-class work extends greet{ //CHILD CLASS
-    appoint(){
-        console.log("your appointment is at 4:00 pm");
+// class greet {    //PARENTS CLASS 
+//     constructor(name){
+//         console.log("hello",name);
+//     };
+//     whatAboutYou(){
+//         console.log("how are you??")
+//     };
+// }
+
+// class work extends greet{ //CHILD CLASS
+//     appoint(){
+//         console.log("your appointment is at 4:00 pm");
+//     }
+// }
+// let x= new  work("keshav");   // STORING THE CLASS IN VARIABLE 
+// console.log(x.whatAboutYou(),x.appoint());
+
+// SUPER KEYWORD 
+
+class greet {    //PARENTS CLASS 
+        constructor(name){
+            console.log("hello",name);
+        };
+        whatAboutYou(){
+            console.log("how are you??")
+        };
     }
-}
-let x= new  work("keshav");   // STORING THE CLASS IN VARIABLE 
-console.log(x.whatAboutYou(),x.appoint());
+    
+    class work extends greet{ //CHILD CLASS
+        constructor(name){
+            super(name);  //to invoke parents class constructor
+            console.log("So",name);
+        }
+        appoint(){
+            console.log("your appointment is at 4:00 pm");
+        }
+    }
+    let x= new  work("keshav");   // STORING THE CLASS IN VARIABLE 
+    console.log(x.whatAboutYou(),x.appoint());
 
