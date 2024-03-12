@@ -421,28 +421,41 @@
 //PRACTICE QUESTIONS 
 // QUESTION 1 
 //you are creating a website for your college . Create a class user with 2 properties, name & email. it also has a method called viewData() that allows user to view website data.
-let data = "info";
-class user {
-    constructor(name,email){
-        this.name=name;
-        this.email=email;
-        // console.log(this.name,this.email);
-    }
-    viewData(){
-        console.log("fetching your data ",data);
-    }
-}
-let keshav =new user("keshav","ypavitra3@gmail.com");
-let rohan =new user("rohan","rohan3323@gmail.com");
-let sohan =new user("sohan","sohan34@gmail.com");
+// let data = "info";
+// class user {
+//     constructor(name,email){
+//         this.name=name;
+//         this.email=email;
+//         // console.log(this.name,this.email);
+//     }
+//     viewData(){
+//         console.log("fetching your data ",data);
+//     }
+// }
+// let keshav =new user("keshav","ypavitra3@gmail.com");
+// let rohan =new user("rohan","rohan3323@gmail.com");
+// let sohan =new user("sohan","sohan34@gmail.com");
 
-// question2
-//create a new class called admin which inherits from user . add a new method called editdata to admin that allows its to edit website date.
-class admin extends user{
-    editdata(data){
-        this.data=data;
-        data="some new data";
-        console.log(data);
-    }
+// // question2
+// //create a new class called admin which inherits from user . add a new method called editdata to admin that allows its to edit website date.
+// class admin extends user{
+//     editdata(data){
+//         this.data=data;
+//         data="some new data";
+//         console.log(data);
+//     }
+// }
+// let Admin=new admin;
+
+// ERROR HANDELING
+
+let a = 5;
+let b= 6;
+console.log("a+b",a+b);
+try{
+    console.log("a+c",c+a); // if we are not sure that this statement would work properly then we use error handeling
 }
-let Admin=new admin;
+catch(error){
+    console.log(error); // this will print the error and all other code will work properly;
+}
+    
