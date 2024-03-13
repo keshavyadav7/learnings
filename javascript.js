@@ -449,13 +449,30 @@
 
 // ERROR HANDELING
 
-let a = 5;
-let b= 6;
-console.log("a+b",a+b);
-try{
-    console.log("a+c",c+a); // if we are not sure that this statement would work properly then we use error handeling
-}
-catch(error){
-    console.log(error); // this will print the error and all other code will work properly;
-}
+// let a = 5;
+// let b= 6;
+// console.log("a+b",a+b);
+// try{
+//     console.log("a+c",c+a); // if we are not sure that this statement would work properly then we use error handeling
+// }
+// catch(error){
+//     console.log(error); // this will print the error and all other code will work properly;
+// }
     
+//API's concepts
+
+URL= 'https://cat-fact.herokuapp.com/facts'
+
+// let promise = fetch(URL);
+// console.log (promise);
+
+async function getData(){
+    console.log("getting your data");
+    let response= await fetch(URL);  
+    console.log(response.status);//JSON FORMAT
+    let data= await response.json();
+    console.log(data);
+    console.log(data[0].text);
+}
+
+getData();
